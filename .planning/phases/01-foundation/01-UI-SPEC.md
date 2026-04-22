@@ -25,6 +25,12 @@ created: 2026-04-22
 
 > This is a static documentation portal built with MkDocs Material, not a React/web app. There is no shadcn, no Tailwind, no component registry. The "design system" is the Material theme configuration in `mkdocs.yml` plus content conventions for stubs. The shadcn initialization gate is not applicable.
 
+### Visual hierarchy
+
+Primary focal point: documentation content area. Navigation sidebar is the secondary visual anchor.
+
+Visual hierarchy: H1 page title (32px bold) > H2 section headings (24px bold) > body text (16px regular) > italic notes (16px regular italic).
+
 ---
 
 ## Spacing Scale
@@ -348,4 +354,4 @@ Plugin load order (D-07): i18n -> search -> offline -> privacy
 - [ ] Dimension 5 Spacing: PASS
 - [ ] Dimension 6 Registry Safety: PASS
 
-**Approval:** pending
+**Approval:** approved 2026-04-22
