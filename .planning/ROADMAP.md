@@ -28,7 +28,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. All dependencies are pinned and installable from requirements.txt without version conflicts (mkdocs>=1.6,<2.0 enforced)
   3. Bilingual directory structure exists with .en.md/.it.md placeholder files in every section
   4. Syntax highlighting, admonitions, content tabs, and code copy button all render correctly in the local preview
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — MkDocs project configuration (requirements.txt + mkdocs.yml)
+- [ ] 01-02-PLAN.md — Bilingual content stubs and directory structure
+- [ ] 01-03-PLAN.md — Build verification and feature validation
 
 **UI hint**: yes
 
@@ -76,7 +81,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/3 | Planned | - |
 | 2. Content & i18n | 0/TBD | Not started | - |
 | 3. Online Deployment | 0/TBD | Not started | - |
 | 4. Offline Distribution | 0/TBD | Not started | - |
