@@ -498,22 +498,13 @@ Source: [CITED: ultrabug.github.io/mkdocs-static-i18n/setup/translating-content/
 | A3 | "Setup" section translation should be "Installazione e configurazione" to avoid collision with "Configuration" child page | Common Pitfalls | Navigation would show duplicate "Configurazione" labels at different levels |
 | A4 | `pymdownx.snippets` `base_path: docs` resolves includes relative to the docs directory | Common Pitfalls | Snippet includes would fail with "file not found" errors |
 
-## Open Questions
+## Open Questions (RESOLVED)
 
-1. **Announce bar link paths for Italian**
-   - What we know: The English announce links to `../chat/getting-started/` (relative from root). Italian pages are at `/it/` prefix.
-   - What's unclear: Whether `../../it/chat/getting-started/` is the correct relative path from the announce bar on Italian pages, or if an absolute path `/it/chat/getting-started/` should be used.
-   - Recommendation: Use absolute paths (`/it/chat/getting-started/` and `/chat/getting-started/`) since the announce bar appears on every page at different depths. Test during implementation.
+1. **Announce bar link paths for Italian** — RESOLVED: Use absolute paths (`/it/chat/getting-started/` and `/chat/getting-started/`). Plan 01 Task 2 specifies absolute paths in the main.html template. Verified during planning.
 
-2. **Search cross-contamination tolerance**
-   - What we know: The current architecture uses a single search index with both languages. Italian pages are prefixed with `it/`.
-   - What's unclear: Whether the success criterion "no cross-contamination" requires fully separate indexes or whether the current single-index-with-prefix approach is acceptable.
-   - Recommendation: The current behavior is standard for mkdocs-static-i18n and acceptable. If strict separation is required, it would need a custom solution beyond the plugin's capabilities.
+2. **Search cross-contamination tolerance** — RESOLVED: Accept current behavior. The single-index-with-prefix approach is standard for mkdocs-static-i18n. CNT-03 coverage relies on Phase 1 config (reconfigure_search: true + lang: [en, it]). No action needed.
 
-3. **Edit URI per-language configuration**
-   - What we know: PIT-23 identifies that edit URI points to English source on Italian pages. mkdocs-static-i18n does not auto-adjust edit_uri.
-   - What's unclear: Whether to configure per-language edit_uri, disable the edit button, or accept current behavior.
-   - Recommendation: Configure per-language `edit_uri` override in the Italian language config if the repo is open for contributions; otherwise disable.
+3. **Edit URI per-language configuration** — RESOLVED: Accept current behavior for v1. Edit URI per-language configuration can be addressed in a future phase if needed. Does not block any CNT requirement.
 
 ## Environment Availability
 
