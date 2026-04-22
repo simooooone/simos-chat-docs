@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-04-22)
 Phase: 1 of 4 (Foundation)
 Plan: 0 of TBD in current phase
 Status: Ready to plan
-Last activity: 2026-04-22 -- Phase 1 context gathered
+Last activity: 2026-04-22 -- Phase 1 UI-SPEC approved
 
 Progress: [#.........] 10%
 
@@ -67,5 +67,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-04-22
-Stopped at: Phase 1 context gathered
-Resume file: .planning/phases/01-foundation/01-CONTEXT.md
+Stopped at: Phase 1 UI-SPEC approved
+Resume file: .planning/phases/01-foundation/01-UI-SPEC.md
