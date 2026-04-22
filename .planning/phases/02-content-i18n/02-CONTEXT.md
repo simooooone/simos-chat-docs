@@ -26,7 +26,7 @@ This phase delivers the content — not the foundation (Phase 1, done), not the 
 - **D-06:** Technical terms kept in English in Italian pages (API, Docker, RBAC, RAG, workspace, deployment, etc.). Standard practice in Italian tech documentation — readers expect these terms untranslated.
 
 ### Announce bar
-- **D-07:** Bilingual version notice — English shows "v1 Documentation — Getting started with AirGap AI Chatbot" linking to Chat/Getting Started. Italian shows "Documentazione v1 — Inizia con AirGap AI Chatbot" linking to the Italian equivalent. Must be implemented in `docs/overrides/partials/announce.html` with i18n-aware logic.
+- **D-07:** Bilingual version notice — English shows "v1 Documentation — Getting started with AirGap AI Chatbot" linking to Chat/Getting Started. Italian shows "Documentazione v1 — Inizia con AirGap AI Chatbot" linking to the Italian equivalent. Must be implemented in `docs/overrides/main.html` with `{% block announce %}` and `i18n_current_language` conditional (Material theme uses a block, not a partial include).
 
 ### Content patterns & reuse
 - **D-08:** Standardized admonition set across all pages: `!!! note` for information, `!!! warning` for cautions, `!!! tip` for recommendations, `!!! danger` for destructive actions. Consistent use makes pages predictable and easier to translate.

@@ -1,7 +1,7 @@
 ---
 phase: 2
 slug: content-i18n
-status: draft
+status: approved
 shadcn_initialized: false
 preset: none
 created: 2026-04-22
@@ -381,4 +381,4 @@ No shadcn registry, no npm packages, no third-party frontend component registrie
 - [ ] Dimension 5 Spacing: PASS -- Material 8px base grid inherited from Phase 1; no custom spacing needed
 - [ ] Dimension 6 Registry Safety: PASS -- no registries used; not applicable for MkDocs Material project
 
-**Approval:** pending
+**Approval:** approved 2026-04-22
