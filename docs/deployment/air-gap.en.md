@@ -167,4 +167,4 @@ docker exec airgap-chatbot netstat -tun | grep ESTABLISHED
 
     Any workflow that depends on an external service must be confirmed as disabled or replaced with an offline alternative.
 
-For regulatory compliance considerations in air-gapped environments, see [Compliance](compliance.md).
+For regulatory compliance considerations in air-gapped environments, see [Compliance](../security/compliance.md).

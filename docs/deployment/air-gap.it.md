@@ -167,4 +167,4 @@ docker exec airgap-chatbot netstat -tun | grep ESTABLISHED
 
     Qualsiasi flusso di lavoro che dipende da un servizio esterno deve essere confermato come disabilitato o sostituito con un'alternativa offline.
 
-Per considerazioni sulla conformita normativa negli ambienti air-gap, vedere [Conformita](compliance.md).
+Per considerazioni sulla conformita normativa negli ambienti air-gap, vedere [Conformita](../security/compliance.md).
