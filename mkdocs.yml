@@ -1,0 +1,166 @@
+# mkdocs.yml - AirGap AI Chatbot Documentation Portal
+# Phase 1: Foundation configuration
+#
+# CRITICAL CONSTRAINTS:
+# - MkDocs must stay on 1.x (2.0 breaks Material plugin system) -- see PIT-01
+# - Do NOT enable navigation.instant (breaks on file:// protocol) -- see PIT-03
+# - Use !ENV conditionals for offline/privacy, NOT the group plugin -- see PIT-05
+# - Use mkdocs-static-i18n, NOT mkdocs-i18n (abandoned) -- see PIT-02
+
+site_name: AirGap AI Chatbot Docs
+site_url: https://docs.airgap-chatbot.example.com/
+site_description: >-
+  Documentation for AirGap AI Chatbot - enterprise-grade, local-first,
+  privacy-first AI chat workspace
+
+# Repository integration
+repo_url: https://github.com/elia/simos-chat-docs
+repo_name: elia/simos-chat-docs
+edit_uri: edit/main/docs/
+
+# Theme configuration (D-04: dark mode default, D-06: default Material theme)
+theme:
+  name: material
+  language: en  # Default language; i18n plugin overrides per-build
+  # D-14: navigation.instant is EXCLUDED (breaks on file:// protocol)
+  features:
+    - navigation.tabs          # D-02: Top-level sections as tabs
+    - navigation.sections      # D-02: Grouped sidebar sections
+    - navigation.indexes       # Section index pages
+    - navigation.top           # Back-to-top button
+    - navigation.trail         # Breadcrumbs (D-02)
+    - navigation.footer        # D-12: Footer prev/next links
+    - search.suggest           # Search autocomplete
+    - search.highlight         # Highlight search results
+    - content.code.copy        # FDN-04: Code copy button
+    - content.code.annotate    # Code annotations support
+    - content.tooltips         # Hover tooltips for abbreviations
+  palette:
+    # D-04: Dark mode as default (listed first)
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+  # D-05: Logo placeholder (asset to be provided later)
+  # logo: assets/logo.svg
+  # D-11: TOC on right side (default behavior, no feature flag needed)
+
+# Plugins (D-07: explicit load order: i18n -> search -> conditioned offline/privacy)
+plugins:
+  - i18n:
+      docs_structure: suffix            # D-03: suffix-based i18n
+      fallback_to_default: true         # D-16: show English if Italian missing
+      reconfigure_material: true        # Auto-configure theme locale + alternates
+      reconfigure_search: true          # D-08: per-language search indexes
+      languages:
+        - locale: en
+          default: true
+          name: English
+          site_name: AirGap AI Chatbot Docs
+        - locale: it
+          name: Italiano
+          site_name: AirGap AI Chatbot - Documentazione
+          nav_translations:
+            Setup: Configurazione
+            Chat: Chat
+            "Documents & RAG": "Documenti e RAG"
+            "Workspaces & Projects": "Aree di lavoro e Progetti"
+            Administration: Amministrazione
+            API: API
+            Deployment: Distribuzione
+            Security: Sicurezza
+  - search:
+      lang:
+        - en
+        - it                        # D-08: bilingual search with Italian stemming
+      separator: '[\s\-\.]+'
+  # D-13: Conditioned on !ENV for offline build only (NOT group plugin)
+  - offline:
+      enabled: !ENV [OFFLINE, false]
+  - privacy:
+      enabled: !ENV [OFFLINE, false]
+
+# Markdown extensions (FDN-04: syntax highlighting, admonitions, content tabs)
+markdown_extensions:
+  - pymdownx.highlight:             # Syntax highlighting
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite            # Inline code highlighting
+  - pymdownx.snippets                # Include code from files
+  - pymdownx.superfences             # Nested code blocks, Mermaid diagrams
+  - pymdownx.tabbed:                 # FDN-04: Content tabs
+      alternate_style: true
+  - pymdownx.details                 # Collapsible admonitions
+  - pymdownx.emoji:                  # Emoji support in admonitions
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition                       # FDN-04: Callouts (note, warning, tip)
+  - attr_list                        # HTML attributes on elements
+  - def_list                         # Definition lists
+  - footnotes                        # Footnotes
+  - md_in_html                       # Markdown inside HTML blocks
+  - tables                           # Tables support
+  - toc:                             # D-11: Table of contents with permalinks
+      permalink: true
+      toc_depth: 3
+
+# Navigation (D-01: feature-area-based, D-02: 8 sections, 2-3 levels)
+nav:
+  - Home: index.md
+  - Setup:
+    - setup/index.md
+    - Installation: setup/installation.md
+    - Configuration: setup/configuration.md
+  - Chat:
+    - chat/index.md
+    - Getting Started: chat/getting-started.md
+    - Features: chat/features.md
+  - "Documents & RAG":
+    - documents-rag/index.md
+    - Uploading: documents-rag/uploading.md
+    - Querying: documents-rag/querying.md
+  - "Workspaces & Projects":
+    - workspaces-projects/index.md
+    - Workspaces: workspaces-projects/workspaces.md
+    - Projects: workspaces-projects/projects.md
+  - Administration:
+    - administration/index.md
+    - RBAC: administration/rbac.md
+    - Settings: administration/settings.md
+  - API:
+    - api/index.md
+    - Endpoints: api/endpoints.md
+    - Authentication: api/authentication.md
+  - Deployment:
+    - deployment/index.md
+    - Docker: deployment/docker.md
+    - "Air-Gap Setup": deployment/air-gap.md
+  - Security:
+    - security/index.md
+    - Overview: security/overview.md
+    - Compliance: security/compliance.md
+
+# Extra configuration
+extra:
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: Italiano
+      link: /it/
+      lang: it
+
+# D-10: Announcement bar placeholder (content in Phase 2)
+# To activate, create docs/overrides/partials/announce.html
+
+# D-09: Print-to-PDF support is built into Material theme
+# (accessible via browser print dialog, no config needed)

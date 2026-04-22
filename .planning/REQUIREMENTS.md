@@ -7,10 +7,10 @@
 
 ### Foundation
 
-- [ ] **FDN-01**: MkDocs project initialized with Material theme (mkdocs-material 9.7.x) and core plugins configured
-- [ ] **FDN-02**: Dependencies pinned in requirements.txt — mkdocs>=1.6,<2.0, mkdocs-material>=9.7, mkdocs-static-i18n==1.3.1, pymdown-extensions>=10.21
-- [ ] **FDN-03**: Bilingual directory structure established with `.en.md`/`.it.md` suffix convention and placeholder content files
-- [ ] **FDN-04**: Syntax highlighting (PyMdown Extensions), admonitions, content tabs, and code copy button configured in mkdocs.yml
+- [x] **FDN-01**: MkDocs project initialized with Material theme (mkdocs-material 9.7.x) and core plugins configured
+- [x] **FDN-02**: Dependencies pinned in requirements.txt — mkdocs>=1.6,<2.0, mkdocs-material>=9.7, mkdocs-static-i18n==1.3.1, pymdown-extensions>=10.21
+- [x] **FDN-03**: Bilingual directory structure established with `.en.md`/`.it.md` suffix convention and placeholder content files
+- [x] **FDN-04**: Syntax highlighting (PyMdown Extensions), admonitions, content tabs, and code copy button configured in mkdocs.yml
 
 ### Content & i18n
 
@@ -59,10 +59,10 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FDN-01 | Phase 1: Foundation | Pending |
-| FDN-02 | Phase 1: Foundation | Pending |
-| FDN-03 | Phase 1: Foundation | Pending |
-| FDN-04 | Phase 1: Foundation | Pending |
+| FDN-01 | Phase 1: Foundation | Complete |
+| FDN-02 | Phase 1: Foundation | Complete |
+| FDN-03 | Phase 1: Foundation | Complete |
+| FDN-04 | Phase 1: Foundation | Complete |
 | CNT-01 | Phase 2: Content & i18n | Pending |
 | CNT-02 | Phase 2: Content & i18n | Pending |
 | CNT-03 | Phase 2: Content & i18n | Pending |

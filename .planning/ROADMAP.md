@@ -12,7 +12,7 @@ Build a bilingual (English + Italian) static documentation portal using MkDocs M
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Initialize MkDocs project with Material theme, pinned dependencies, bilingual directory structure, and core rendering features
+- [x] **Phase 1: Foundation** - Initialize MkDocs project with Material theme, pinned dependencies, bilingual directory structure, and core rendering features (completed 2026-04-22)
 - [ ] **Phase 2: Content & i18n** - Write bilingual documentation pages with working navigation, language switcher, and per-language search
 - [ ] **Phase 3: Online Deployment** - Deploy the site to Netlify with CI/CD pipeline and branch previews
 - [ ] **Phase 4: Offline Distribution** - Produce a self-contained offline build with privacy plugin, file:// compatibility, and ZIP packaging for air-gapped transfer
@@ -31,9 +31,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — MkDocs project configuration (requirements.txt + mkdocs.yml)
-- [ ] 01-02-PLAN.md — Bilingual content stubs and directory structure
-- [ ] 01-03-PLAN.md — Build verification and feature validation
+- [x] 01-01-PLAN.md — MkDocs project configuration (requirements.txt + mkdocs.yml)
+- [x] 01-02-PLAN.md — Bilingual content stubs and directory structure
+- [x] 01-03-PLAN.md — Build verification and feature validation
 
 **UI hint**: yes
 
@@ -81,7 +81,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/3 | Planned | - |
+| 1. Foundation | 3/3 | Complete | 2026-04-22 |
 | 2. Content & i18n | 0/TBD | Not started | - |
 | 3. Online Deployment | 0/TBD | Not started | - |
 | 4. Offline Distribution | 0/TBD | Not started | - |
