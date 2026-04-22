@@ -50,8 +50,8 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Configuration and infrastructure for bilingual content rendering
-- [ ] 02-02-PLAN.md — Home pages and section index content
+- [x] 02-01-PLAN.md — Configuration and infrastructure for bilingual content rendering
+- [x] 02-02-PLAN.md — Home pages and section index content
 - [ ] 02-03-PLAN.md — Child pages part 1: Setup, Chat, Documents & RAG, Workspaces & Projects
 - [ ] 02-04-PLAN.md — Child pages part 2: Administration, API, Deployment, Security
 
@@ -88,6 +88,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete | 2026-04-22 |
-| 2. Content & i18n | 0/4 | Not started | - |
+| 2. Content & i18n | 2/4 | In Progress | - |
 | 3. Online Deployment | 0/TBD | Not started | - |
 | 4. Offline Distribution | 0/TBD | Not started | - |

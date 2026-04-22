@@ -18,7 +18,7 @@
 - [ ] **CNT-02**: Language switcher with stay-on-page behavior configured via Material `extra.alternate` and mkdocs-static-i18n
 - [ ] **CNT-03**: Per-language search index — lunr.js with `lang: [en, it]`, Italian stemming, and `reconfigure_search: true`
 - [ ] **CNT-04**: Navigation structure with tabs, sections, and breadcrumbs defined in mkdocs.yml `nav`
-- [ ] **CNT-05**: Admonitions, content tabs, and code copy button render correctly in both language versions
+- [x] **CNT-05**: Admonitions, content tabs, and code copy button render correctly in both language versions
 
 ### Online Deployment
 
@@ -67,7 +67,7 @@
 | CNT-02 | Phase 2: Content & i18n | Pending |
 | CNT-03 | Phase 2: Content & i18n | Pending |
 | CNT-04 | Phase 2: Content & i18n | Pending |
-| CNT-05 | Phase 2: Content & i18n | Pending |
+| CNT-05 | Phase 2: Content & i18n | Complete |
 | DPL-01 | Phase 3: Online Deployment | Pending |
 | DPL-02 | Phase 3: Online Deployment | Pending |
 | DPL-03 | Phase 3: Online Deployment | Pending |
