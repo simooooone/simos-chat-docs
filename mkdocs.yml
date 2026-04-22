@@ -21,6 +21,7 @@ edit_uri: edit/main/docs/
 # Theme configuration (D-04: dark mode default, D-06: default Material theme)
 theme:
   name: material
+  custom_dir: docs/overrides    # Enable template overrides for announce bar
   language: en  # Default language; i18n plugin overrides per-build
   # D-14: navigation.instant is EXCLUDED (breaks on file:// protocol)
   features:
@@ -69,7 +70,8 @@ plugins:
           name: Italiano
           site_name: AirGap AI Chatbot - Documentazione
           nav_translations:
-            Setup: Configurazione
+            # Section-level (8 items)
+            Setup: "Installazione e configurazione"
             Chat: Chat
             "Documents & RAG": "Documenti e RAG"
             "Workspaces & Projects": "Aree di lavoro e Progetti"
@@ -77,6 +79,29 @@ plugins:
             API: API
             Deployment: Distribuzione
             Security: Sicurezza
+            # Child-page level (16 items)
+            Home: Home
+            Installation: Installazione
+            Configuration: Configurazione
+            "Getting Started": "Per iniziare"
+            Features: Funzionalita
+            Uploading: Caricamento
+            Querying: Interrogazione
+            Workspaces: "Aree di lavoro"
+            Projects: Progetti
+            RBAC: RBAC
+            Settings: Impostazioni
+            Endpoints: Endpoint
+            Authentication: Autenticazione
+            Docker: Docker
+            "Air-Gap Setup": "Configurazione Air-Gap"
+            Overview: Panoramica
+            Compliance: Conformita
+          admonition_translations:
+            note: Nota
+            warning: Avviso
+            tip: Suggerimento
+            danger: Pericolo
   - search:
       lang:
         - en
@@ -95,7 +120,9 @@ markdown_extensions:
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite            # Inline code highlighting
-  - pymdownx.snippets                # Include code from files
+  - pymdownx.snippets:
+      base_path: docs            # Resolve snippet paths relative to docs/
+      check_paths: true          # Warn if snippet file not found
   - pymdownx.superfences             # Nested code blocks, Mermaid diagrams
   - pymdownx.tabbed:                 # FDN-04: Content tabs
       alternate_style: true
@@ -148,16 +175,6 @@ nav:
     - security/index.md
     - Overview: security/overview.md
     - Compliance: security/compliance.md
-
-# Extra configuration
-extra:
-  alternate:
-    - name: English
-      link: /en/
-      lang: en
-    - name: Italiano
-      link: /it/
-      lang: it
 
 # D-10: Announcement bar placeholder (content in Phase 2)
 # To activate, create docs/overrides/partials/announce.html

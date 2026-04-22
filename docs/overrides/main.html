@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block announce %}
+  {% if i18n_current_language == "it" %}
+  <span>
+    <a href="/it/chat/getting-started/">
+      Documentazione v1 &mdash; Inizia con AirGap AI Chatbot
+    </a>
+  </span>
+  {% else %}
+  <span>
+    <a href="/chat/getting-started/">
+      v1 Documentation &mdash; Getting started with AirGap AI Chatbot
+    </a>
+  </span>
+  {% endif %}
+{% endblock %}
