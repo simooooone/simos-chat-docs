@@ -59,23 +59,23 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FDN-01 | Phase 1 | Pending |
-| FDN-02 | Phase 1 | Pending |
-| FDN-03 | Phase 1 | Pending |
-| FDN-04 | Phase 1 | Pending |
-| CNT-01 | Phase 2 | Pending |
-| CNT-02 | Phase 2 | Pending |
-| CNT-03 | Phase 2 | Pending |
-| CNT-04 | Phase 2 | Pending |
-| CNT-05 | Phase 2 | Pending |
-| DPL-01 | Phase 3 | Pending |
-| DPL-02 | Phase 3 | Pending |
-| DPL-03 | Phase 3 | Pending |
-| DPL-04 | Phase 3 | Pending |
-| OFL-01 | Phase 4 | Pending |
-| OFL-02 | Phase 4 | Pending |
-| OFL-03 | Phase 4 | Pending |
-| OFL-04 | Phase 4 | Pending |
+| FDN-01 | Phase 1: Foundation | Pending |
+| FDN-02 | Phase 1: Foundation | Pending |
+| FDN-03 | Phase 1: Foundation | Pending |
+| FDN-04 | Phase 1: Foundation | Pending |
+| CNT-01 | Phase 2: Content & i18n | Pending |
+| CNT-02 | Phase 2: Content & i18n | Pending |
+| CNT-03 | Phase 2: Content & i18n | Pending |
+| CNT-04 | Phase 2: Content & i18n | Pending |
+| CNT-05 | Phase 2: Content & i18n | Pending |
+| DPL-01 | Phase 3: Online Deployment | Pending |
+| DPL-02 | Phase 3: Online Deployment | Pending |
+| DPL-03 | Phase 3: Online Deployment | Pending |
+| DPL-04 | Phase 3: Online Deployment | Pending |
+| OFL-01 | Phase 4: Offline Distribution | Pending |
+| OFL-02 | Phase 4: Offline Distribution | Pending |
+| OFL-03 | Phase 4: Offline Distribution | Pending |
+| OFL-04 | Phase 4: Offline Distribution | Pending |
 
 **Coverage:**
 - v1 requirements: 17 total
@@ -84,4 +84,4 @@
 
 ---
 *Requirements defined: 2026-04-22*
-*Last updated: 2026-04-22 after initial definition*
+*Last updated: 2026-04-22 after roadmap creation*
