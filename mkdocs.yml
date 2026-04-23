@@ -8,7 +8,7 @@
 # - Use mkdocs-static-i18n, NOT mkdocs-i18n (abandoned) -- see PIT-02
 
 site_name: AirGap AI Chatbot Docs
-site_url: https://docs.airgap-chatbot.example.com/
+site_url: https://docs-airgap-chatbot.netlify.app/
 site_description: >-
   Documentation for AirGap AI Chatbot - enterprise-grade, local-first,
   privacy-first AI chat workspace
