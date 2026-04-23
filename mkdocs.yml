@@ -14,8 +14,8 @@ site_description: >-
   privacy-first AI chat workspace
 
 # Repository integration
-repo_url: https://github.com/elia/simos-chat-docs
-repo_name: elia/simos-chat-docs
+repo_url: https://github.com/simooooone/simos-chat-docs
+repo_name: simooooone/simos-chat-docs
 edit_uri: edit/main/docs/
 
 # Theme configuration (D-04: dark mode default, D-06: default Material theme)
