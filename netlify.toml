@@ -1,0 +1,36 @@
+# netlify.toml - AirGap AI Chatbot Documentation Portal
+# Phase 3: Online deployment
+#
+# CRITICAL CONSTRAINTS:
+# - Build command is `mkdocs build` only -- do NOT add pip install (D-07; Netlify auto-installs from requirements.txt)
+# - Python version goes in runtime.txt, NOT here as env var (D-07)
+# - Redirect /en/* -> /* (not / -> /en/) -- mkdocs-static-i18n builds default language at root, not /en/
+# - Security headers per D-09
+
+# Build configuration
+# Netlify auto-installs from requirements.txt before running the build command
+[build]
+  command = "mkdocs build"
+  publish = "site/"
+
+# Redirect /en/* to /* for backward compatibility
+# mkdocs-static-i18n v1.3.1 builds the default language (English) at root /, not /en/.
+# This redirect ensures any /en/ bookmarks still work.
+# Do NOT redirect / to /en/ -- that would 404 (English lives at /, not /en/).
+[[redirects]]
+  from = "/en/*"
+  to = "/:splat"
+  status = 301
+
+# Security headers (D-09)
+# Applied to all responses served by Netlify CDN
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # unsafe-inline needed for MkDocs Material inline content; Google Fonts origins needed for online build
+    # (privacy plugin localizes these only in offline build)
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self'"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
