@@ -62,11 +62,16 @@ Plans:
 **Depends on**: Phase 2
 **Requirements**: DPL-01, DPL-02, DPL-03, DPL-04
 **Success Criteria** (what must be TRUE):
-  1. Pushing to the main branch triggers an automatic deployment to Netlify via GitHub Actions
-  2. The site is accessible at the configured Netlify URL with correct routing (root redirects to /en/)
-  3. Pull requests generate branch preview deployments on Netlify
-  4. The Netlify build environment uses the correct Python version (3.12.x) and installs all dependencies successfully
-**Plans**: TBD
+  1. Pushing to the main branch triggers an automatic deployment to Netlify via native git integration
+  2. The site is accessible at the Netlify URL with correct routing (English at /, Italian at /it/, /en/* redirects to /*)
+  3. Pull requests generate deploy previews on Netlify with automatic bot comments
+  4. The Netlify build environment uses Python 3.12 (via runtime.txt) and installs all dependencies successfully
+  5. GitHub Actions build-check workflow runs mkdocs build --strict on every PR targeting main
+**Plans**: 2 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Deployment configuration files (netlify.toml, runtime.txt, build-check.yml, site_url)
+- [ ] 03-02-PLAN.md — Netlify site setup and deployment verification
 
 ### Phase 4: Offline Distribution
 **Goal**: Users in air-gapped environments can access complete, searchable documentation from a ZIP file with zero internet dependency
@@ -89,5 +94,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete | 2026-04-22 |
 | 2. Content & i18n | 4/4 | Complete | 2026-04-22 |
-| 3. Online Deployment | 0/TBD | Not started | - |
+| 3. Online Deployment | 0/2 | In progress | - |
 | 4. Offline Distribution | 0/TBD | Not started | - |
